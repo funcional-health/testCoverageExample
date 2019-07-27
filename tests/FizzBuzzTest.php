@@ -21,4 +21,10 @@ class FizzBuzzTest extends TestCase
         $fizzBuzz = new FizzBuzz();
 	$this->assertEquals("FizzBuzz", $fizzBuzz->processNumber(225));
     }
+
+    public function testFizzBuzzShouldReturnEmptyStringForEveryNumberNotMultipleOf3And5()
+    {
+        $fizzBuzz = new FizzBuzz();
+	$this->assertEquals("", $fizzBuzz->processNumber(1));
+    }
 }
