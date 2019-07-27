@@ -1,6 +1,7 @@
 vendor/
-phpunit.xml
+coverage/*
 *.swp
 .env.*.php
 .env.php
 .env
+phpunit.xml
