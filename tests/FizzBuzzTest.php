@@ -27,4 +27,16 @@ class FizzBuzzTest extends TestCase
         $fizzBuzz = new FizzBuzz();
 	$this->assertEquals("", $fizzBuzz->processNumber(1));
     }
+
+    public function testFizzBuzzShouldReturnFizzFor3()
+    {
+        $fizzBuzz = new FizzBuzz();
+	$this->assertEquals("Fizz", $fizzBuzz->processNumber(3));
+    }
+
+    public function testFizzBuzzShouldReturnBuzzFor5()
+    {
+        $fizzBuzz = new FizzBuzz();
+	$this->assertEquals("Buzz", $fizzBuzz->processNumber(5));
+    }
 }
