@@ -1,14 +1,22 @@
-FROM php:7.2-fpm
+FROM php:7.2-fpm-stretch
 
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends git zip
+RUN apt-get update && apt-get install -y zlib1g-dev zip libzip4 git wget libc6 vim\
+    && rm -rf /var/lib/apt/lists/* \
+    && docker-php-ext-install zip pcntl
 
-RUN curl -sS https://getcomposer.org/installer | php \
-        && mv composer.phar /usr/local/bin/ \
-        && ln -s /usr/local/bin/composer.phar /usr/local/bin/composer
+RUN pecl install xdebug \
+    && docker-php-ext-enable xdebug
+
+RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+RUN php composer-setup.php
+RUN php -r "unlink('composer-setup.php');"
+RUN mv composer.phar /usr/local/bin/composer
+
+RUN mkdir -p /var/www/html/
+
+WORKDIR /var/www/html/
 
 COPY . /var/www/html
-WORKDIR /var/www/html
 
 RUN composer install --prefer-source --no-interaction
 
