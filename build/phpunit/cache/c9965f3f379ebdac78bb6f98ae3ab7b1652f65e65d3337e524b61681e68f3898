@@ -1,1 +1,0 @@
-a:1:{s:7:"MyClass";a:6:{s:4:"name";s:7:"MyClass";s:14:"namespacedName";s:7:"MyClass";s:9:"namespace";s:0:"";s:9:"startLine";i:3;s:7:"endLine";i:15;s:7:"methods";a:1:{s:2:"ab";a:6:{s:10:"methodName";s:2:"ab";s:9:"signature";s:10:"ab($a, $b)";s:10:"visibility";s:6:"public";s:9:"startLine";i:5;s:7:"endLine";i:14;s:3:"ccn";i:3;}}}}

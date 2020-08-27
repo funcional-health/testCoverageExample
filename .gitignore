@@ -5,4 +5,4 @@ coverage/*
 .env.php
 .env
 phpunit.xml
-build/
+build/*
