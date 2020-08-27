@@ -8,12 +8,12 @@ class FizzBuzz
 
         if ($number%3 == 0) {
             $result .= "Fizz";
-	}
+	    }
 
-	if ($number%5 == 0) {
+	    if ($number%5 == 0) {
              $result .= "Buzz";
-	}
+	    }
 
-	return $result;
+	    return $result;
     }
 }

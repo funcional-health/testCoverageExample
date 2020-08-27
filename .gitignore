@@ -7,3 +7,4 @@ coverage/*
 phpunit.xml
 infection.json.dist
 infection.log
+.idea/
