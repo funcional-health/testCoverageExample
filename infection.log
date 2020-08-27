@@ -1,0 +1,43 @@
+Escaped mutants:
+================
+
+1) /var/www/html/src/FizzBuzz.php:26    [M] EqualIdentical
+
+--- Original
++++ New
+@@ @@
+     public function abc(int $number1, int $number2) : string
+     {
+         $resultado = '';
+-        if ($number1 == 5) {
++        if ($number1 === 5) {
+             $resultado = 'Buzz';
+         }
+         if ($number2 == 10) {
+
+
+2) /var/www/html/src/FizzBuzz.php:30    [M] EqualIdentical
+
+--- Original
++++ New
+@@ @@
+         if ($number1 == 5) {
+             $resultado = 'Buzz';
+         }
+-        if ($number2 == 10) {
++        if ($number2 === 10) {
+             $resultado = 'Buzz';
+         }
+         return $resultado;
+     }
+ }
+
+
+Timed Out mutants:
+==================
+
+Skipped mutants:
+================
+
+Not Covered mutants:
+====================
