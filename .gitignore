@@ -8,3 +8,5 @@ phpunit.xml
 infection.json.dist
 infection.log
 .idea/
+.phpunit.result.cache
+build/
