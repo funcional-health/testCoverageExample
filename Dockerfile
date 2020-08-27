@@ -18,6 +18,8 @@ WORKDIR /var/www/html/
 
 COPY . /var/www/html
 
+RUN composer self-update --preview
+
 RUN composer install --prefer-source --no-interaction
 
 ENV PATH="~/.composer/vendor/bin:./vendor/bin:${PATH}"
