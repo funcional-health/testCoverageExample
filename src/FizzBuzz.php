@@ -4,9 +4,7 @@ class FizzBuzz
 {
     public function processNumber ($number) : string
     {
-        $result = "";
-
-        $result .= $this->divisibleBy3($number);
+        $result = $this->divisibleBy3($number);
 
         $result .= $this->divisibleBy5($number);
 
