@@ -6,3 +6,4 @@ coverage/*
 .env
 phpunit.xml
 build/*
+.phpunit.result.cache
